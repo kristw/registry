@@ -8,7 +8,7 @@
 
 | Package                                                                                  | Version                                                                                                                                  |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [global-storage](https://github.com/kristw/registry/tree/master/packages/global-storage) | [![Version](https://img.shields.io/npm/v/global-storage.svg?style=flat-square)](https://img.shields.io/npm/v/global-storage.svg?style=flat-square) |
+| [global-box](https://github.com/kristw/registry/tree/master/packages/global-box) | [![Version](https://img.shields.io/npm/v/global-box.svg?style=flat-square)](https://img.shields.io/npm/v/global-box.svg?style=flat-square) |
 
 ### License
 
