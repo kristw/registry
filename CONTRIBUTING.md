@@ -6,7 +6,7 @@
 2. have `yarn` install package dependencies and manage the symlinking between packages for you
 
 ```sh
-git clone ...encodable && cd encodable
+git clone ...registry && cd registry
 yarn install
 yarn build
 ```
@@ -17,7 +17,7 @@ yarn build
 and dependencies between packages in this monorepo.
 
 ```
-encodable/
+registry/
   lerna.json
   package.json
   ...
@@ -39,7 +39,7 @@ encodable/
 
 Each package defines its own build config, linting, and testing. You can have lerna run commands
 across all packages using the syntax `yarn run test` (or `yarn run test:watch` for watch mode) from
-the root `encodable` directory.
+the root `registry` directory.
 
 ### Committing
 
@@ -51,7 +51,7 @@ committing. You can use `npm run commit` to help you create a commit message.
 ### Publishing
 
 **Prerequisite:** You'll need an [npmjs.com](https://npmjs.com) account that is part of the
-`encodable` admin.
+`registry` admin.
 
 1. Make sure you're logged in to NPM from your shell. Run `npm login` if necessary.
 2. To make the release, run `yarn run release` and follow the prompts.
