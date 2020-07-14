@@ -1,0 +1,36 @@
+{
+  "name": "global-storage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A simple key-value store that is truly a singleton. Use this to as an alternative to sticking values into global.",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristw/registry.git"
+  },
+  "keywords": [
+    "singleton",
+    "key-value store",
+    "storage"
+  ],
+  "contributors": [
+    "Krist Wongsuphasawat (http://kristw.yellowpigz.com)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kristw/registry/issues"
+  },
+  "homepage": "https://github.com/kristw/registry/tree/master/packages/global-storage",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "jest-mock-console": "^1.0.1"
+  }
+}
