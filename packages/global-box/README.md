@@ -2,6 +2,7 @@
 
 [![Version](https://img.shields.io/npm/v/global-box.svg?style=flat)](https://img.shields.io/npm/v/global-box.svg?style=flat)
 [![David (path)](https://img.shields.io/david/kristw/registry.svg?path=packages%2Fglobal-box&style=flat-square)](https://david-dm.org/kristw/registry?path=packages/global-box)
+[![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
 > A simple key-value store singleton.
 

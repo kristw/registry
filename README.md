@@ -3,6 +3,7 @@
 [![Codecov branch](https://img.shields.io/codecov/c/github/kristw/registry/master.svg?style=flat-square)](https://codecov.io/gh/kristw/registry/branch/master)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kristw/registry/build-and-test-workflow?style=flat-square)
 [![David](https://img.shields.io/david/dev/kristw/registry.svg?style=flat-square)](https://david-dm.org/kristw/registry?type=dev)
+[![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
 ## Packages
 
