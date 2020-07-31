@@ -1,9 +1,9 @@
 /**
- * simple key-value store
+ * simple key-value store for global cache
  */
 export default class Store {
   private readonly items: {
-    [key: string]: unknown;
+    [globalId: string]: unknown;
   };
 
   constructor() {
@@ -11,63 +11,65 @@ export default class Store {
   }
 
   /**
-   * Check if the item with given key exists
-   * @param key
+   * Check if the item with given globalId exists
+   * @param globalId
    */
-  has(key: string) {
-    const item = this.items[key];
+  has(globalId: string) {
+    const item = this.items[globalId];
 
     return item != null;
   }
 
   /**
-   * Get value from key and cast to type T
-   * @param key
+   * Get value from globalId and cast to type T
+   * @param globalId
    */
-  get<T>(key: string) {
-    const value = this.items[key] as T | undefined;
+  get<T>(globalId: string) {
+    const value = this.items[globalId] as T | undefined;
 
     return value;
   }
 
   /**
-   * Get value from key if the value exists.
+   * Get value from globalId if the value exists.
    * Otherwise, create a new value.
-   * @param key
+   * @param globalId
    * @param factory
    */
-  getOrCreate<T>(key: string, factory: () => T) {
-    if (this.has(key)) {
-      return this.get<T>(key) as T;
+  getOrCreate<T>(globalId: string, factory: () => T) {
+    if (this.has(globalId)) {
+      return this.get<T>(globalId) as T;
     }
     const value = factory();
-    this.set(key, value);
+    this.set(globalId, value);
 
     return value;
   }
 
   /**
-   * Store the given key and value
-   * @param key
+   * Store the given globalId and value
+   * @param globalId
    * @param value
    */
-  set<T>(key: string, value: T) {
-    if (this.has(key)) {
+  set<T>(globalId: string, value: T) {
+    if (this.has(globalId)) {
       // eslint-disable-next-line no-console
-      console.warn(`Item with key "${key}" already exists. You are assigning a new value.`);
+      console.warn(
+        `Item with globalId "${globalId}" already exists. You are assigning a new value.`,
+      );
     }
-    this.items[key] = value;
+    this.items[globalId] = value;
 
     return this;
   }
 
   /**
-   * Remove item with the specified key from this store.
-   * If the item with key does not exist, do nothing.
-   * @param key
+   * Remove item with the specified globalId from this store.
+   * If the item with globalId does not exist, do nothing.
+   * @param globalId
    */
-  remove(key: string) {
-    delete this.items[key];
+  remove(globalId: string) {
+    delete this.items[globalId];
 
     return this;
   }

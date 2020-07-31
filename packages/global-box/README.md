@@ -68,11 +68,11 @@ vs. in application
 ```ts
 import { getStore } from 'global-box';
 const store = getStore();
-store.has(key);
-store.get<string>(key); // must specify value type via generic
-store.getOrCreate(key, factory);
-store.remove(key);
-store.set(key);
+store.has(globalId);
+store.get<string>(globalId); // must specify value type via generic
+store.getOrCreate(globalId, factory);
+store.remove(globalId);
+store.set(globalId);
 ```
 
 ### Credits

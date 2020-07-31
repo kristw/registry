@@ -14,7 +14,7 @@ describe('Store', () => {
     restoreConsole();
   });
 
-  describe('.get(key)', () => {
+  describe('.get(globalId)', () => {
     it('return value if exists', () => {
       store.set('key1', 'value1');
       expect(store.get<string>('key1')).toEqual('value1');
@@ -43,7 +43,7 @@ describe('Store', () => {
       });
     });
   });
-  describe('.has(key)', () => {
+  describe('.has(globalId)', () => {
     it('return true if exists', () => {
       store.set('key2', 'value2');
       expect(store.has('key2')).toBeTruthy();
@@ -52,7 +52,7 @@ describe('Store', () => {
       expect(store.has('invalid-key')).toBeFalsy();
     });
   });
-  describe('.set(key, value)', () => {
+  describe('.set(globalId, value)', () => {
     it('sets value', () => {
       store.set('key3', 'value3');
       expect(store.get<string>('key3')).toEqual('value3');
@@ -67,7 +67,7 @@ describe('Store', () => {
       expect(store.set('key4', 123)).toBe(store);
     });
   });
-  describe('.remove(key)', () => {
+  describe('.remove(globalId)', () => {
     it('sets value', () => {
       store.set('key5', 'value5');
       store.remove('key5');

@@ -15,6 +15,7 @@
   },
   "keywords": [
     "singleton",
+    "global",
     "key-value store",
     "storage"
   ],
