@@ -61,9 +61,9 @@
     "husky": "^4.2.1",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.3",
-    "react-test-renderer": "^16.12.0",
-    "react-dom": "^16.12.0",
     "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
     "typescript": "^3.9.3"
   },
   "engines": {
@@ -82,7 +82,10 @@
   ],
   "nimbus": {
     "drivers": [
-      { "driver": "babel", "strategy": "none" },
+      {
+        "driver": "babel",
+        "strategy": "none"
+      },
       "eslint",
       "jest",
       "prettier",
@@ -119,7 +122,12 @@
         {
           "files": "*.{js,jsx,ts,tsx}",
           "rules": {
-            "@typescript-eslint/no-explicit-any": ["warn", { "fixToUnknown": false }]
+            "@typescript-eslint/no-explicit-any": [
+              "warn",
+              {
+                "fixToUnknown": false
+              }
+            ]
           }
         }
       ]

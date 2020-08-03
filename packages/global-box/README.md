@@ -4,6 +4,8 @@
 [![David (path)](https://img.shields.io/david/kristw/registry.svg?path=packages%2Fglobal-box&style=flat-square)](https://david-dm.org/kristw/registry?path=packages/global-box)
 [![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
+This package will never have breaking change and keeps everything simple and backward-compatible.
+
 > A simple key-value store singleton.
 
 Sometimes you have to do horrible things, like use the global object to share a singleton or some values.
@@ -31,6 +33,8 @@ store.get('share.config.something'); // 123;
 ### Installation
 
 For this to work correctly, **there must be only a single copy** of `global-box` in `node_modules` at all times. (Similar to how there must be only a single copy of `react`.)
+
+Note: This package will never have breaking change and keeps everything simple and backward-compatible.
 
 * For application developers, just do a regular installation. If you want to use `global-box` directly, or have some libraries that depends on it.
 
