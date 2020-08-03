@@ -17,17 +17,17 @@ Instead of attaching values to the global object, which can lead to security con
 package A
 
 ```ts
-import { getStore } from 'global-box';
-const store = getStore();
-store.set('share.config.something', 123);
+import { globalBox } from 'global-box';
+const box = globalBox();
+box.set('share.config.something', 123);
 ```
 
 package B
 
 ```ts
-import { getStore } from 'global-box';
-const store = getStore();
-store.get('share.config.something'); // 123;
+import { globalBox } from 'global-box';
+const box = globalBox();
+box.get('share.config.something'); // 123;
 ```
 
 ### Installation
@@ -70,13 +70,13 @@ vs. in application
 ### Available functions
 
 ```ts
-import { getStore } from 'global-box';
-const store = getStore();
-store.has(globalId);
-store.get<string>(globalId); // must specify value type via generic
-store.getOrCreate(globalId, factory);
-store.remove(globalId);
-store.set(globalId);
+import { globalBox } from 'global-box';
+const box = globalBox();
+box.has(globalId);
+box.get<string>(globalId); // must specify value type via generic
+box.getOrCreate(globalId, factory);
+box.remove(globalId);
+box.set(globalId);
 ```
 
 ### Credits
