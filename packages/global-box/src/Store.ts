@@ -2,7 +2,7 @@
  * simple key-value store for global cache
  */
 export default class Store {
-  private readonly items: {
+  readonly items: {
     [globalId: string]: unknown;
   };
 

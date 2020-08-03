@@ -1,2 +1,6 @@
-// eslint-disable-next-line import/prefer-default-export
-export { default as getStore } from './getStore';
+import getStore from './getStore';
+
+/** An alias for `getStore()` */
+const globalBox = getStore;
+
+export { getStore, globalBox };

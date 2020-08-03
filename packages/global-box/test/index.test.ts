@@ -1,5 +1,5 @@
 import mockConsole, { RestoreConsole } from 'jest-mock-console';
-import { getStore } from '../src';
+import { getStore, globalBox } from '../src';
 import Store from '../src/Store';
 import { COUNTER, dangerouslyResetStore } from '../src/getStore';
 
@@ -12,6 +12,12 @@ describe('global-box', () => {
 
   afterEach(() => {
     restoreConsole();
+  });
+
+  describe('globalBox()', () => {
+    it('is defined', () => {
+      expect(globalBox).toBeDefined();
+    });
   });
 
   describe('getStore()', () => {
