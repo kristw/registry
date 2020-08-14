@@ -1,0 +1,18 @@
+coverage:
+  status:
+    patch: off
+    project:
+      default:
+        target: 0%
+        threshold: 10%
+      core-packages-ts:
+        target: 100%
+        paths:
+          - "packages"
+          - "!packages/global-box/src/getGlobal.ts"
+          - "!packages/**/*.jsx"
+          - "!packages/**/*.tsx"
+      disabled:
+        target: 0
+        paths:
+          - "packages/global-box/src/getGlobal.ts"
