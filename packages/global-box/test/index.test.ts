@@ -2,6 +2,7 @@ import mockConsole, { RestoreConsole } from 'jest-mock-console';
 import { getStore, globalBox } from '../src';
 import Store from '../src/Store';
 import { COUNTER, dangerouslyResetStore } from '../src/getStore';
+import getGlobal from '../src/getGlobal';
 
 describe('global-box', () => {
   let restoreConsole: RestoreConsole;
@@ -27,7 +28,7 @@ describe('global-box', () => {
     it('returns a store', () => {
       dangerouslyResetStore();
       expect(getStore()).toBeInstanceOf(Store);
-      expect(window[COUNTER]).toEqual(1);
+      expect(getGlobal()[COUNTER]).toEqual(1);
     });
     it('always return the same store', () => {
       const store1 = getStore();
@@ -36,17 +37,18 @@ describe('global-box', () => {
     });
     it('warns when there are existing store(s)', () => {
       dangerouslyResetStore();
+      const globals = getGlobal();
       // manually set
-      window[COUNTER] = 1;
+      globals[COUNTER] = 1;
       expect(getStore()).toBeInstanceOf(Store);
       // eslint-disable-next-line no-console
       expect(console.warn).toHaveBeenCalledTimes(1);
-      expect(window[COUNTER]).toEqual(2);
+      expect(globals[COUNTER]).toEqual(2);
       expect(getStore()).toBeInstanceOf(Store);
       // check that it only warns on the first call to getStore
       // eslint-disable-next-line no-console
       expect(console.warn).toHaveBeenCalledTimes(1);
-      expect(window[COUNTER]).toEqual(2);
+      expect(globals[COUNTER]).toEqual(2);
     });
   });
 });
